@@ -6,7 +6,7 @@ Author: liuhh02 https://medium.com/@liuhh02
 """
 
 import logging
-from telegram import Updater, CommandHandler, MessageHandler, Filters
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import os
 PORT = int(os.environ.get('PORT', 5000))
 
