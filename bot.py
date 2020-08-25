@@ -6,6 +6,8 @@ Author: liuhh02 https://medium.com/@liuhh02
 """
 
 import logging
+from typing import Optional
+
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import os
 
@@ -17,7 +19,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 
-TOKEN = os.environ.get('TOKEN')
+TOKEN = os.environ['TOKEN']
 
 # Define a few command handlers. These usually take the two arguments update and
 # context. Error handlers also receive the raised TelegramError object in error.
