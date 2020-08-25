@@ -21,6 +21,8 @@ import boto.s3.connection
 
 TOKEN = boto.s3.connection.S3Connection(os.environ['TOKEN'])
 
+from boto.s3.connection import S3Connection
+TOKEN = S3Connection(os.environ['TOKEN'])
 
 # Define a few command handlers. These usually take the two arguments update and
 # context. Error handlers also receive the raised TelegramError object in error.
