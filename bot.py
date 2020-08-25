@@ -15,7 +15,9 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
                     level=logging.INFO)
 
 logger = logging.getLogger(__name__)
-TOKEN = '1337410158:AAFc5uZv74k3GnUoNGse6XS4NAa-R_sRuoQ'
+
+from boto.s3.connection import S3Connection
+TOKEN = S3Connection(os.environ['TOKEN'])
 
 # Define a few command handlers. These usually take the two arguments update and
 # context. Error handlers also receive the raised TelegramError object in error.
